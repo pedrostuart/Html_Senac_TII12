@@ -5,6 +5,154 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Posicionamento Flexbox</title>
+  <style>
+    body{
+      margin: 0;
+      padding: 0;
+    }
+    .flex-container{
+      display: flex;
+      background-color: orange;
+    }
+    .flex-container>div{
+      margin: 10px;
+      background-color: white;
+      padding: 20px;
+      font-size: 30px;
+    }
+    .flex-direction{
+      display: flex;
+      flex-direction: row;
+      background-color: plum;
+    }
+    .flex-direction>div{
+      margin: 10px;
+      background-color: white;
+      padding: 20px;
+      font-size: 30px;
+      width: 500px;
+      line-height: 30px;
+      text-align: center;
+    }
+    .flex-wrap{
+      display: flex;
+      flex-wrap: wrap;
+      background-color: red;
+    }
+    .flex-wrap>div{
+      margin: 10px;
+      background-color: white;
+      padding: 20px;
+      font-size: 30px;
+      width: 100px;
+      text-align: center;
+    }
+    .justify-content{
+      display: flex;
+      justify-content: space-around;
+      background-color: rgb(28, 112, 168);
+    }
+    .justify-content>div{
+      margin: 10px;
+      background-color: white;
+      padding: 20px;
+      font-size: 30px;
+      width: 100px;
+      text-align: center;
+    }
+    .align-items{
+      display: flex;
+      align-items: center;
+      height: 200px;
+      background-color: chartreuse;
+    }
+    .align-items>div{
+      background-color: white;
+      line-height: 75px;
+      width: 100px;
+      text-align: center;
+      margin: 10px;
+    }
+    .align-items_base{
+      display: flex;
+      align-items: baseline;
+      background-color: chartreuse;
+    }
+    .align-items_base>div{
+      background-color: white;
+      line-height: 75px;
+      width: 100px;
+      text-align: center;
+      margin: 10px;
+    
+    }
+    .align-content{
+      background-color: black;
+      display: flex;
+      height: 600px;
+      flex-direction: column;
+      align-content: space-between;
+      overflow: auto;
+    }
+    .align-content>div{
+      background-color: white;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+    }
+    .flex-grow{
+      display: flex;  
+      background-color: yellow;
+    }
+    .flex-grow>div{
+      background-color: dodgerblue;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+    }
+    .align-self{
+      display: flex;
+      height: 200px;
+      background-color: rgb(153, 0, 255);
+    }
+    .align-self>div{
+      background-color: rgb(255, 23, 236);
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+    }
+    .align-self2{
+    display: flex;
+      height: 200px;
+      background-color: brown;
+    }
+    .align-self2>div{
+      background-color: bisque;
+      width: 100px;
+      margin: 10px;
+      text-align: center;
+      line-height: 75px;
+      font-size: 30px;
+    }
+    .alinhamentoPerfeito{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: cyan;
+      height: 500px;
+    }
+    .alinhamentoPerfeito>div{
+      background-color: darkgray;
+      width: 300px;
+      height: 300px;
+    }
+  </style>
 </head>
 
 <body>
@@ -20,7 +168,7 @@
     <b>display</b> propriedade para <b>flex</b>
   </p>
   <h2>Exemplo: </h2>
-  <div>
+  <div class="flex-container">
     <div>A</div>
     <div>B</div>
     <div>C</div>
@@ -50,7 +198,7 @@
     </li>
   </ul>
   <h2>Exemplo: </h2>
-  <div>
+  <div class="flex-direction">
     <div>A</div>
     <div>B</div>
     <div>C</div>
@@ -65,7 +213,7 @@
     <li><b>wrap-reverse:</b> especifica que os itens flexíveis irão embrulhar se necessário, em ordem inversa</li>
   </ul>
   <h2>Exemplo: </h2>
-  <div>
+  <div class="flex-wrap">
     <div>1</div>
     <div>2</div>
     <div>3</div>
@@ -96,7 +244,7 @@
     <li><b>space-between:</b> O valor exibe os itens flexíveis com espaço entre o Linhas de linha</li>
   </ul>
   <h2>Exemplo: </h2>
-  <div>
+  <div class="justify-content">
     <div>Item 1</div>
     <div>Item 2</div>
     <div>Item 3</div>
@@ -113,14 +261,14 @@
     <li><b>baseline:</b> O valor alinha os itens flexíveis, como suas linhas de base, alinham-se</li>
   </ul>
   <h2>Exemplos:</h2>
-  <div>
+  <div class="align-items">
     <div>1</div>
     <div>2</div>
     <div>3</div>
     <div>4</div>
   </div>
   <br>
-  <div>
+  <div class="align-items_base">
     <div>
       <h1>1</h1>
     </div>
@@ -147,7 +295,7 @@
   </ul>
   <p>Neste exemplo, usamos um contêiner de 600 pixels de altura, com o flex-wrap propriedade definida para wrap, para
     melhor demonstrar o align-content.</p>
-  <div>
+  <div class="align-content">
     <div>1</div>
     <div>2</div>
     <div>3</div>
@@ -167,10 +315,10 @@
   <h2>flex-grow</h2>
   <p>A propriedade especifica o quanto um item flexível crescerá em relação ao resto dos itens flexíveis.</p>
   <h2>Exemplo:</h2>
-  <div>
-    <div>A</div>
-    <div>B</div>
-    <div>C</div>
+  <div class="flex-grow">
+    <div style="flex-grow: 1;">A</div>
+    <div style="flex-grow: 5;">B</div>
+    <div style="flex-grow: 6;">C</div>
   </div>
   <hr>
   <h2>align-self</h2>
@@ -178,10 +326,10 @@
     substitui o alinhamento padrão definido pelo do recipiente <b>align-items</b>.</p>
 
   <h2>Exemplos:</h2>
-  <div>
+  <div class="align-self">
     <div>A</div>
     <div>B</div>
-    <div>C</div>
+    <div style="align-self: center;">C</div>
     <div>D</div>
   </div>
   <br>
@@ -189,10 +337,10 @@
 
   <p> O "alinhamento: extremidade flexível;" alinha o item flexível selecionado na parte inferior do contêiner.</p>
   <br>
-  <div>
+  <div class="align-self2">
     <div>A</div>
-    <div>B</div>
-    <div>C</div>
+    <div style="align-self: flex-start;">B</div>
+    <div style="align-self: flex-end;">C</div>
     <div>D</div>
   </div>
   <hr>
@@ -201,7 +349,7 @@
   <p>Defina os dois <b>justify-content</b> e a <b>align-items</b> propriedades para <b>center</b>, e o item flex será
     perfeitamente centrado.</p>
   <h2>Exemplo:</h2>
-  <div>
+  <div class="alinhamentoPerfeito">
     <div></div>
   </div>
 
